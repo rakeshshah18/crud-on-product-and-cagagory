@@ -17,8 +17,8 @@ routes.post("/", async (req, res) => {
 routes.get("/", async (req, res) => {
   try {
     const items = await Products.find()
-    .populate("catagory")
-    .sort({ createdAt: -1 });
+      .populate("category")
+      .sort({ createdAt: -1 });
     // const items = await items.find().sort({createdAt: -1})
     res.status(200).json(items);
   } catch (error) {

@@ -7,8 +7,8 @@ const productSchema = new mongoose.Schema({
         required: true,
     },
     category: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Category",
+        type: String,
+        ref: "Catagory",
     },
     price: {
         type: Number,
@@ -23,6 +23,6 @@ const productSchema = new mongoose.Schema({
 module.exports = mongoose.model("Products", productSchema);
 //create new schema of catagory
 //crud operations on catagory
-//use different route file 
+//use different route file
 //use forgen key
 //update catagory in model.js file
